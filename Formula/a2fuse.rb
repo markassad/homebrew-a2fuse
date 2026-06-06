@@ -7,7 +7,7 @@ class A2fuse < Formula
 
   depends_on "rust" => :build
   depends_on "pkg-config" => :build
-  depends_on "macfuse"
+  depends_on cask: "macfuse"
 
   def install
     system "cargo", "install", "--locked", "--features", "macfuse", "--root", prefix
